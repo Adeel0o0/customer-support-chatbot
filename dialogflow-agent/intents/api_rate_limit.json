@@ -1,0 +1,50 @@
+{
+  "id": "ede75bd6-06e0-4204-8b79-c50fd6a3f4bf",
+  "name": "api_rate_limit",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "23e40491-660c-487d-94d5-8d624c836da4",
+          "name": "number",
+          "required": false,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Let me explain our API rate limits:\n\nRate limits by plan:\n- Free: 100 requests/hour\n- Pro: 1,000 requests/hour\n- Enterprise: 10,000 requests/hour\n\nIf you\u0027re hitting 429 errors:\n✓ Implement exponential backoff\n✓ Cache responses when possible\n✓ Batch requests where supported\n✓ Check the rate-limit-remaining header\n\nNeed higher limits? Upgrade your plan or contact our sales team.\n\nRate limit docs: https://docs.yourcompany.com/api/rate-limits\n\nWhat\u0027s your current plan?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

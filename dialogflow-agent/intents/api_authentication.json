@@ -1,0 +1,50 @@
+{
+  "id": "a105a856-a9b2-43e9-8748-5f8d85bbb381",
+  "name": "api_authentication",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "dcec0d47-b373-4f90-b801-1cd1dbee5239",
+          "name": "number",
+          "required": false,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Let me help you with API authentication!\n\n\nFind your API key:\n1. Go to Settings → Developers → API Keys\n2. Click \"Generate New Key\" if needed\n3. Copy the key immediately (it\u0027s only shown once)\n\nCommon auth issues:\n- 401 Unauthorized: API key is missing or invalid\n- 403 Forbidden: API key doesn\u0027t have required permissions\n\nAPI Auth docs: https://docs.yourcompany.com/api/authentication\n\nAre you getting a specific error code?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

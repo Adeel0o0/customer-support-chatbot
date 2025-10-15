@@ -1,0 +1,35 @@
+{
+  "id": "4d0f8a78-856c-4c99-b573-b42d42c08a5b",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "I\u0027m not sure I understand. I can help with:\n\n- Password resets and login issues\n- Billing and invoices\n- Setting up integrations (Slack, Salesforce, etc.)\n- API authentication and keys\n- API rate limits and errors\n\nWhat can I help you with?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

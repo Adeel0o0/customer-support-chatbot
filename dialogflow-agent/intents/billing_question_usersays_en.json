@@ -1,0 +1,132 @@
+[
+  {
+    "id": "b3412e44-3094-4856-aad1-573233ac1fcf",
+    "data": [
+      {
+        "text": "need an invoice",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1f76bc48-7e39-47c3-b6b3-653fbfd0b04a",
+    "data": [
+      {
+        "text": "what\u0027s my subscription cost",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a2619b95-e0de-49b2-b50b-f3af6024f9e9",
+    "data": [
+      {
+        "text": "billing information",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "bd3186f9-85c7-4f2d-8415-c9ed0297c22c",
+    "data": [
+      {
+        "text": "change payment method",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a8ab5e2d-06c0-4eaf-812c-85a261c7c955",
+    "data": [
+      {
+        "text": "how much do I pay",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3de05362-2fec-4f6c-b55a-50065d023a9e",
+    "data": [
+      {
+        "text": "when is my next payment",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d7003911-b418-4b9e-b43c-eb2d629e05c4",
+    "data": [
+      {
+        "text": "show me my invoice",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f0ded495-3b22-4492-833d-dac932999335",
+    "data": [
+      {
+        "text": "billing cycle",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ca05b2b2-cf20-4d7c-a31f-306e26408eb5",
+    "data": [
+      {
+        "text": "update credit card",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9a2c11ef-23ed-41b9-961a-cf1d39409f02",
+    "data": [
+      {
+        "text": "when am I charged",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,144 @@
+[
+  {
+    "id": "00567b8a-c32a-42f4-95eb-595bc4c49327",
+    "data": [
+      {
+        "text": "API token expired",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8760dc5f-9283-4e0a-a7d1-fc32d90cb577",
+    "data": [
+      {
+        "text": "invalid API credentials",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "49c3b728-930e-42e5-a5aa-19445fd5244a",
+    "data": [
+      {
+        "text": "generate new API key",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "71cce9ff-7874-49df-ac46-c329cf009513",
+    "data": [
+      {
+        "text": "API authentication",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "25150275-5341-491f-aaa3-2c4c3fcc85cb",
+    "data": [
+      {
+        "text": "how do I authenticate",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5bb2b70d-3c41-4ff5-a056-ad15cf1bba02",
+    "data": [
+      {
+        "text": "403",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " forbidden",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "fab0df2b-c5e1-452a-8517-4bdc42eeaf49",
+    "data": [
+      {
+        "text": "401",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " error",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cd5438fb-46b8-4342-a441-9a89810bf86f",
+    "data": [
+      {
+        "text": "authentication failed",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8928e104-654b-4fa1-929a-25dda78b1917",
+    "data": [
+      {
+        "text": "API key not working",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "93ec5578-1288-429b-b339-6f224fefb239",
+    "data": [
+      {
+        "text": "where\u0027s my API key",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "354b056c-5048-41f5-938c-e5d5a531bf99",
+    "data": [
+      {
+        "text": "API throttling",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1c4bc696-70e9-4b9b-ab85-2343b1f59e44",
+    "data": [
+      {
+        "text": "increase API limits",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a329f3f5-5ad3-436b-a994-6243223bf938",
+    "data": [
+      {
+        "text": "what are the rate limits",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5a9563c7-7008-455f-8c5c-20f258885703",
+    "data": [
+      {
+        "text": "API quota",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "93176b64-065e-434e-9ea0-eaa967508dfb",
+    "data": [
+      {
+        "text": "rate limit exceeded",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e22849db-b63a-44a6-bd55-061b1359114e",
+    "data": [
+      {
+        "text": "too many requests",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "306a61bf-2834-43ea-9291-c6ee789da9e6",
+    "data": [
+      {
+        "text": "how many requests can I make",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c1280342-e3dc-4619-a062-adcaf8cddd6c",
+    "data": [
+      {
+        "text": "429",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      },
+      {
+        "text": " error",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1edf19f8-24b7-4072-9e88-1d68bbc21b4b",
+    "data": [
+      {
+        "text": "getting rate limited",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "49f8318e-d9f4-4f28-bb1e-27c66b1ff790",
+    "data": [
+      {
+        "text": "API is slow",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

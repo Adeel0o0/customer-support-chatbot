@@ -1,0 +1,138 @@
+[
+  {
+    "id": "13d4d4ea-052d-4425-9c40-6bb2ae8029cf",
+    "data": [
+      {
+        "text": "integration is broken",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d10e2bcf-5194-4ee0-9d1e-db4d3de06132",
+    "data": [
+      {
+        "text": "does this support Google Sheets",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2ad7fbee-f0b5-418a-acfb-559067bc1393",
+    "data": [
+      {
+        "text": "integration documentation",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b52ad9dd-0a34-48c2-928d-e7c59e34d6c6",
+    "data": [
+      {
+        "text": "how to set up webhooks",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "99ab21b7-263b-450b-a948-3359ce18ba36",
+    "data": [
+      {
+        "text": "third",
+        "meta": "@sys.ordinal",
+        "alias": "ordinal",
+        "userDefined": false
+      },
+      {
+        "text": " party integrations",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "5317b7ce-db14-4a68-8a5e-0b39941f900d",
+    "data": [
+      {
+        "text": "integrate with HubSpot",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f1b3825f-1945-49f9-9ab6-d9ac3ca27632",
+    "data": [
+      {
+        "text": "connect to Zapier",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8613353a-c378-4026-aef6-3f6ba28621c6",
+    "data": [
+      {
+        "text": "where\u0027s my API key for integrations",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9a957e8f-f8ee-4dd2-a461-549828420c16",
+    "data": [
+      {
+        "text": "Salesforce integration not working",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3429c3c4-d490-41bb-b2ad-67b4dcc59405",
+    "data": [
+      {
+        "text": "how do I connect Slack",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

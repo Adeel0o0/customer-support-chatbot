@@ -1,0 +1,35 @@
+{
+  "id": "1594a02f-dbd4-41b4-aeaf-5f007a26aa03",
+  "name": "billing_question",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "I can help with billing questions!\n\nHere\u0027s some quick info:\n- Billing Cycle: You\u0027re charged on the same day each month\n- View Invoices: Go to Settings → Billing → Invoice History\n- Update Payment: Settings → Billing → Payment Methods\n\nFor detailed billing questions or to speak with our billing team, I can connect you to a specialist.\n\nDoes this answer your question, or would you like to speak with billing?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,50 @@
+{
+  "id": "d2f68b20-0845-43a9-804c-ce90865425c6",
+  "name": "integration_help",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "9a9ff5ad-f367-4833-b461-1138481cbd6a",
+          "name": "ordinal",
+          "required": false,
+          "dataType": "@sys.ordinal",
+          "value": "$ordinal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "I can help you set up integrations!\n\nPopular integrations:\n- Slack: Settings → Integrations → Slack (requires admin permissions)\n- Salesforce: Settings → Integrations → Salesforce\n- Zapier: Use our Zapier app (search \"YourApp\" in Zapier)\n- Webhooks: Settings → Developers → Webhooks\n\n📚 Full integration docs: https://docs.yourcompany.com/integrations\n\nWhich integration are you working with?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
