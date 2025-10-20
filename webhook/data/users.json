@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "email": "john@company.com",
+      "name": "John Smith",
+      "api_key": "sk_live_abc123xyz789",
+      "api_key_created": "2025-10-01",
+      "api_key_last_used": "2025-10-20T14:30:00Z",
+      "subscription_tier": "Pro",
+      "monthly_cost": 49,
+      "rate_limit_hourly": 1000,
+      "requests_used_today": 247,
+      "requests_reset_time": "2025-10-21T00:00:00Z",
+      "next_billing_date": "2025-11-15",
+      "billing_email": "billing@company.com"
+    },
+    {
+      "email": "sarah@startup.io",
+      "name": "Sarah Chen",
+      "api_key": "sk_live_def456uvw321",
+      "api_key_created": "2025-09-15",
+      "api_key_last_used": "2025-10-20T16:45:00Z",
+      "subscription_tier": "Free",
+      "monthly_cost": 0,
+      "rate_limit_hourly": 100,
+      "requests_used_today": 87,
+      "requests_reset_time": "2025-10-21T00:00:00Z",
+      "next_billing_date": null,
+      "billing_email": "sarah@startup.io"
+    },
+    {
+      "email": "alex@enterprise.com",
+      "name": "Alex Johnson",
+      "api_key": "sk_live_ghi789mno654",
+      "api_key_created": "2025-08-10",
+      "api_key_last_used": "2025-10-20T17:20:00Z",
+      "subscription_tier": "Enterprise",
+      "monthly_cost": 299,
+      "rate_limit_hourly": 10000,
+      "requests_used_today": 3421,
+      "requests_reset_time": "2025-10-21T00:00:00Z",
+      "next_billing_date": "2025-12-01",
+      "billing_email": "accounts@enterprise.com"
+    }
+  ]
+}
