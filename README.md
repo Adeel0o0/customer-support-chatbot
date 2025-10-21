@@ -25,11 +25,29 @@ This chatbot demonstrates end-to-end implemntation for customers by handling Tie
 - 5 core intents covering common support quries
 - Custom fallback handling for unknown queries
 
-**Phase 2**
-- Webhook integration for dynamic responses
-- Sentiment detection for escalation
-- Multi-channel deployment (Slack)
+**Phase 2: Webhook Integration (Local dev)**
+- Added Python Flask webhook for dynamic, personalised responses:
+```
+User Query → Dialogflow (NLU) → Webhook (Flask) → User Database → Personalized Response
+```
 
+### Dynamic Features Implemented
+
+**API Authentication Intent:**
+- Looks up user's API key by email
+- Shows key creation date and last usage
+- Personalizes response with user's name
+
+**Rate Limits Intent:**
+- Displays user's current plan and quota
+- Shows real-time usage (e.g., "247/1000 requests used")
+- Warns if approaching limit (>80%)
+- Suggests upgrade path based on current tier
+
+**Billing Intent:**
+- Shows subscription details and costs
+- Displays next billing date
+- Different responses for Free vs. Paid users
 
 ## Success Metrics
 
@@ -44,10 +62,25 @@ This chatbot demonstrates end-to-end implemntation for customers by handling Tie
 
 ![Chatbot Demo](assets/demo-screenshot.png) 
 
-[Web Demo Link Coming Soon]
+### Local testing
+
+Webhook successfully tested locally:
+```bash
+curl -X POST http://localhost:5000/webhook \
+  -H "Content-Type: application/json" \
+  -d '{"queryResult": {"intent": {"displayName": "api_authentication"}, "parameters": {"email": "john@company.com"}}}'
+```
+
+**Response:**
+```json
+{
+  "fulfillmentText": "Hi John Smith! Here's your API key information:\n\n🔑 API Key: `sk_live_abc123xyz789`\n📅 Created: 2025-10-01\n⏰ Last used: 19 hours ago..."
+}
+```
 
 ## Technologies
 
 - Google Dialogflow (NLU)
-- Python 3.x (webhook - coming)
-- Flask (API server - coming)
+- Python 3.x + Flask
+- JSON-based mock database
+- RESTful webhook endpoint
