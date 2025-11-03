@@ -2,8 +2,16 @@ from flask import Flask, request, jsonify
 import json
 import os
 from datetime import datetime
+from rag_engine import get_rag_engine
 
 app = Flask(__name__)
+
+# Initialize RAG engine once at startup
+
+print("Initializing RAG engine...")
+rag_engine = get_rag_engine()
+print("RAG engine ready!")
+
 
 # Load user data
 def load_users():
@@ -27,15 +35,11 @@ def find_user_by_email(email):
 def webhook():
     """Main webhook endpoint for Dialogflow"""
     
-    # Get request from Dialogflow
     req = request.get_json(force=True)
-    
-    # Extract intent name
     intent_name = req.get('queryResult').get('intent').get('displayName')
-    
-    # Extract parameters (like email if user provided it)
     parameters = req.get('queryResult').get('parameters', {})
     
+    # LLMOps: Log incoming requests for monitoring
     print(f"Intent: {intent_name}")
     print(f"Parameters: {parameters}")
     
@@ -46,13 +50,61 @@ def webhook():
         response_text = handle_api_rate_limits(parameters)
     elif intent_name == 'billing_question':
         response_text = handle_billing_question(parameters)
+    elif intent_name == 'general_knowledge':  # NEW: RAG-powered intent
+        response_text = handle_general_knowledge(parameters)
     else:
-        response_text = "I can help with API authentication, rate limits, or billing questions."
+        response_text = "I can help with API authentication, rate limits, billing questions, or general documentation questions."
     
     # Return response to Dialogflow
     return jsonify({
         'fulfillmentText': response_text
     })
+
+def handle_general_knowledge(parameters):
+    """
+    Handle general documentation questions using RAG.
+    
+    LLMOps Practice: Separate handler for RAG queries enables A/B testing
+    """
+    # Get the original query from Dialogflow
+    # This is the actual user's question
+    query = parameters.get('query', '')
+    
+    if not query:
+        return """I can help you find information in our documentation! 
+
+Try asking about:
+- Integration setup (Slack, Salesforce, Zapier, Webhooks)
+- API documentation and best practices
+- Billing and subscription management
+
+What would you like to know?"""
+    
+    # Use RAG to search knowledge base
+    # Software Engineering: Error handling for production reliability
+    try:
+        result = rag_engine.search(query)
+        
+        answer = result['answer']
+        sources = result['sources']
+        
+        # Format response with sources
+        # LLMOps: Source attribution for transparency and debugging
+        response = f"{answer}\n\n"
+        
+        if sources:
+            # Clean up source paths for display
+            source_names = [os.path.basename(s) for s in sources]
+            response += f"📚 Sources: {', '.join(source_names)}"
+        
+        return response
+        
+    except Exception as e:
+        # Software Engineering: Graceful error handling
+        print(f"RAG Error: {str(e)}")
+        return """I'm having trouble accessing our documentation right now. 
+
+Let me connect you with a human agent who can help."""
 
 def handle_api_authentication(parameters):
     """Handle API authentication queries."""
