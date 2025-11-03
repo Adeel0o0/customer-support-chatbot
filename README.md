@@ -49,12 +49,6 @@ User Query → Dialogflow (NLU) → Webhook (Flask) → User Database → Person
 - Displays next billing date
 - Different responses for Free vs. Paid users
 
-## Success Metrics
-
-- **Target Resolution Rate:** 60%
-- **Response Time:** <2 seconds
-- **Escalation Triggers:** 3 failed attempts or negative sentiment
-- **Success Criteria:** CSAT >4.0/5.0
 
 ## Demo
 
@@ -84,3 +78,10 @@ curl -X POST http://localhost:5000/webhook \
 - Python 3.x + Flask
 - JSON-based mock database
 - RESTful webhook endpoint
+
+## Success Metrics
+
+- **Target Resolution Rate:** 60%
+- **Response Time:** <2 seconds
+- **Escalation Triggers:** 3 failed attempts or negative sentiment
+- **Success Criteria:** CSAT >4.0/5.0
