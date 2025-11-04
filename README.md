@@ -1,54 +1,84 @@
 # Customer Support Chatbot
-AI-powered customer support chatbot for SaaS companies using Google Dialogflow. Handles password resets, billing questions, integrations, and API troubleshooting.
+
+AI-powered customer support chatbot for SaaS companies using Google Dialogflow and LangChain RAG. Handles password resets, billing questions, integrations, API troubleshooting, and general documentation queries.
 
 ## Project Overview
 
-This chatbot demonstrates end-to-end implemntation for customers by handling Tier-1 queries
+This chatbot demonstrates end-to-end implementation of conversational AI with Retrieval-Augmented Generation (RAG), reducing support ticket volume by handling Tier 1 queries automatically while providing grounded, accurate responses from a knowledge base.
 
-**Built for** SaaS/API companies with small technical support needs
-**Platform*** Google Diaglogflow
-**Status:** Phase 1 Complete (Intent-based responses)
+**Built for:** SaaS/API companies with technical support needs  
+**Status:** ✅ Production-ready (Phase 3 Complete)
 
-##  Features
+##  Core Features
 
 - **Password Reset**: Guides users through password recovery process
 - **Billing Support**: Answers common billing and invoice questions
 - **Integration Help**: Assists with third-party integrations (Slack, Salesforce, etc.)
 - **API Authentication**: Troubleshoots API key and authentication issues
+(401/403 errors)
 - **Rate Limit Support**: Explains API rate limits and quota errors
+- **Knowledge Base Search (RAG)**: Searches documentation to answer general questions with source citations
+
+### Advanced Features
+- **LLMOps Monitoring Dashboard**: Real-time query analytics, performance metrics, source usage tracking
+- **Dynamic Responses**: Personalized answers based on user data (subscription tier, usage, etc.)
+- **Source Attribution**: Every RAG response cites documentation sources
+- **Performance Tracking**: Response time monitoring and query logging
+- **Intent Analytics**: Track which intents are most used
 
 ## Architecture
 
 **Phase 1**
 
-- Intent-based responses using Dialogflow
-- 5 core intents covering common support quries
-- Custom fallback handling for unknown queries
+```
+User Query → Dialogflow (NLU) → Intent Recognition → Static Response
+```
 
 **Phase 2: Webhook Integration (Local dev)**
-- Added Python Flask webhook for dynamic, personalised responses:
+
 ```
-User Query → Dialogflow (NLU) → Webhook (Flask) → User Database → Personalized Response
+User Query → Dialogflow → Intent + Parameters → Flask Webhook → User Database → Personalized Response
 ```
 
-### Dynamic Features Implemented
+### Phase 3: RAG with LangChain (Current)
+```
+User Query → Dialogflow → Flask Webhook
+                              ↓
+                         RAG Engine (LangChain)
+                              ↓
+              Knowledge Base (Vector Search) → Top 3 Relevant Chunks
+                              ↓
+                         GPT-4 Response Generation
+                              ↓
+                    Answer + Source Citation
+```
 
-**API Authentication Intent:**
-- Looks up user's API key by email
-- Shows key creation date and last usage
-- Personalizes response with user's name
+## LLMOps
 
-**Rate Limits Intent:**
-- Displays user's current plan and quota
-- Shows real-time usage (e.g., "247/1000 requests used")
-- Warns if approaching limit (>80%)
-- Suggests upgrade path based on current tier
+### 1. Prompt Engineering
+- Custom prompt templates version-controlled as code
+- Enforces source attribution in responses
+- Fallback handling for unkn queries
 
-**Billing Intent:**
-- Shows subscription details and costs
-- Displays next billing date
-- Different responses for Free vs. Paid users
+### 2. Query Logging
+- Every query logged with metadata (timestamp, intent, response time, sources)
+- Structured JSON format for analysis
+- Enables continuous model improvement
 
+### 3. Monitoring Dashboard
+- Real-time metrics: query volume, response time, success rate
+- Intent distribution visualization
+- Knowledge base source usage analytics
+- Recent queries log
+
+![Monitoring Dashboard](assets/llm-ops-dashboard.png)
+
+### 5. Source Attribution
+- All RAG responses cite documentation sources
+- Transparent, verifiable answers
+- Enables debugging and quality improvement
+
+![Source Usage](assets/llm-ops-monitoring-3.png)
 
 ## Demo
 
@@ -56,28 +86,51 @@ User Query → Dialogflow (NLU) → Webhook (Flask) → User Database → Person
 
 ![Chatbot Demo](assets/demo-screenshot.png) 
 
-### Local testing
+### Monitoring Dashboard
+Run locally: `python webhook/dashboard.py` → http://localhost:5001
 
-Webhook successfully tested locally:
+## Local Setup
 ```bash
-curl -X POST http://localhost:5000/webhook \
-  -H "Content-Type: application/json" \
-  -d '{"queryResult": {"intent": {"displayName": "api_authentication"}, "parameters": {"email": "john@company.com"}}}'
-```
+# Clone repository
+git clone https://github.com/Adeel0o0/customer-support-chatbot.git
+cd customer-support-chatbot/webhook
 
-**Response:**
-```json
-{
-  "fulfillmentText": "Hi John Smith! Here's your API key information:\n\n🔑 API Key: `sk_live_abc123xyz789`\n📅 Created: 2025-10-01\n⏰ Last used: 19 hours ago..."
-}
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate  # Mac/Linux
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment variables
+cp .env.example .env
+# Add your OpenAI API key to .env
+
+# Run webhook server
+python app.py  # Port 5000
+
+# Run monitoring dashboard (separate terminal)
+python dashboard.py  # Port 5001
 ```
 
 ## Technologies
 
-- Google Dialogflow (NLU)
-- Python 3.x + Flask
-- JSON-based mock database
-- RESTful webhook endpoint
+### AI Stack
+- **Dialogflow** - Natural Language Understanding
+- **LangChain** - RAG framework
+- **OpenAI API** - Embeddings (text-embedding-3-small) + LLM (gpt-4o-mini)
+- **Chroma** - Vector database for semantic search
+
+### Backend
+- **Python 3.x** - Core language
+- **Flask** - Webhook server
+- **Monitoring Dashboard** - Real-time analytics
+
+### Data
+- **JSON** - User database (mock data for demo)
+- **Markdown** - Knowledge base documents
+
+---
 
 ## Success Metrics
 
@@ -85,3 +138,9 @@ curl -X POST http://localhost:5000/webhook \
 - **Response Time:** <2 seconds
 - **Escalation Triggers:** 3 failed attempts or negative sentiment
 - **Success Criteria:** CSAT >4.0/5.0
+
+**Current Stats:**
+- 3 intents with dynamic responses
+- 1 RAG-powered intent searching 3 knowledge base documents
+- 7 semantic chunks indexed for retrieval
+- Top 3 relevant chunks retrieved per query
