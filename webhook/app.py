@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 import json
 import os
+import time
 from datetime import datetime
 from rag_engine import get_rag_engine
+from monitoring import get_query_logger
+
 
 app = Flask(__name__)
 
@@ -34,10 +37,14 @@ def find_user_by_email(email):
 @app.route('/webhook', methods=['POST'])
 def webhook():
     """Main webhook endpoint for Dialogflow"""
+
+    start_time = time.time() #track response time
     
     req = request.get_json(force=True)
     intent_name = req.get('queryResult').get('intent').get('displayName')
     parameters = req.get('queryResult').get('parameters', {})
+    query_text = req.get('queryResult').get('queryText', '')
+
     
     # LLMOps: Log incoming requests for monitoring
     print(f"Intent: {intent_name}")
@@ -55,6 +62,16 @@ def webhook():
     else:
         response_text = "I can help with API authentication, rate limits, billing questions, or general documentation questions."
     
+     # Log query for monitoring (LLMOps practice)
+    response_time = time.time() - start_time
+    logger = get_query_logger()
+    logger.log_query(
+        query=query_text,
+        intent=intent_name,
+        response_time=response_time,
+        user_email=parameters.get('email')
+    )
+
     # Return response to Dialogflow
     return jsonify({
         'fulfillmentText': response_text
@@ -63,11 +80,8 @@ def webhook():
 def handle_general_knowledge(parameters):
     """
     Handle general documentation questions using RAG.
-    
-    LLMOps Practice: Separate handler for RAG queries enables A/B testing
     """
-    # Get the original query from Dialogflow
-    # This is the actual user's question
+    start_time = time.time()
     query = parameters.get('query', '')
     
     if not query:
@@ -88,8 +102,17 @@ What would you like to know?"""
         answer = result['answer']
         sources = result['sources']
         
+        # Log with sources
+        response_time = time.time() - start_time
+        logger = get_query_logger()
+        logger.log_query(
+            query=query,
+            intent="general_knowledge",
+            response_time=response_time,
+            sources=sources
+        )
+
         # Format response with sources
-        # LLMOps: Source attribution for transparency and debugging
         response = f"{answer}\n\n"
         
         if sources:

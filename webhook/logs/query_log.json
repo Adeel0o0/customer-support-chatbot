@@ -1,0 +1,60 @@
+[
+  {
+    "timestamp": "2025-11-04T11:44:06.278038",
+    "query": "How do I connect Slack?",
+    "intent": "general_knowledge",
+    "response_time_ms": 5278.89,
+    "sources": [
+      "knowledge_base/integrations.md"
+    ],
+    "user_email": null,
+    "query_length": 23
+  },
+  {
+    "timestamp": "2025-11-04T11:44:06.278725",
+    "query": "How do I connect Slack?",
+    "intent": "general_knowledge",
+    "response_time_ms": 5279.86,
+    "sources": [],
+    "user_email": null,
+    "query_length": 23
+  },
+  {
+    "timestamp": "2025-11-04T11:44:41.843529",
+    "query": "my email is john@company.com",
+    "intent": "api_authentication",
+    "response_time_ms": 1.2,
+    "sources": [],
+    "user_email": "john@company.com",
+    "query_length": 28
+  },
+  {
+    "timestamp": "2025-11-04T11:45:06.285130",
+    "query": "What is the refund policy?",
+    "intent": "general_knowledge",
+    "response_time_ms": 6195.64,
+    "sources": [
+      "knowledge_base/billing.md"
+    ],
+    "user_email": null,
+    "query_length": 26
+  },
+  {
+    "timestamp": "2025-11-04T11:45:06.285805",
+    "query": "What is the refund policy?",
+    "intent": "general_knowledge",
+    "response_time_ms": 6196.68,
+    "sources": [],
+    "user_email": null,
+    "query_length": 26
+  },
+  {
+    "timestamp": "2025-11-04T11:50:31.379914",
+    "query": "billing info for alex@enterprise.com",
+    "intent": "billing_question",
+    "response_time_ms": 1.47,
+    "sources": [],
+    "user_email": "alex@enterprise.com",
+    "query_length": 36
+  }
+]
